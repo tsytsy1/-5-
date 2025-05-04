@@ -1,0 +1,41 @@
+UObject
+└── UEngine
+    ├── UGameEngine       (游戏运行时引擎)
+    └── UEditorEngine     (编辑器环境下的引擎核心)
+        ├── UUnrealEdEngine          (编辑器主逻辑管理)
+        ├── UAssetEditorEngine       (资产管理编辑器基类)
+        │   ├── UMaterialEditorEngine    (材质编辑器)
+        │   ├── UBlueprintEditorEngine   (蓝图编辑器)
+        │   └── UAnimationEditorEngine   (动画编辑器)
+        ├── ULevelEditorSubsystem    (关卡编辑器子系统)
+        ├── UContentBrowserSubsystem (资源浏览器子系统)
+        ├── UEditorUtilitySubsystem  (编辑器工具与脚本扩展)
+        └── UPluginManager 
+UObject
+├── AActor (场景中的实体对象)
+│   ├── AInfo               (关卡信息基类)
+│   ├── ALevelScriptActor   (关卡蓝图逻辑载体)
+│   ├── AController         (控制器逻辑)
+│   │   ├── APlayerController      (玩家控制器)
+│   │   └── AAIController          (AI控制器)
+│   ├── AGameModeBase        (游戏规则管理)
+│   ├── AGameStateBase       (游戏状态同步)
+│   ├── AHUD                 (界面绘制)
+│   ├── APawn                (可控制实体)
+│   │   └── ACharacter       (角色类，带移动组件)
+│   ├── APlayerCameraManager (摄像机管理)
+│   ├── AWorldSettings       (关卡全局设置)
+│   └── ...其他Actor子类
+│
+└── UActorComponent (Actor功能组件)
+    ├── UMovementComponent    (移动逻辑组件)
+    ├── USceneComponent        (带空间变换的组件)
+    │   ├── UAudioComponent         (音频组件)
+    │   ├── UCameraComponent       (摄像机组件)
+    │   └── UPrimitiveComponent    (可渲染的几何组件)
+    │       ├── UMeshComponent          (网格组件基类)
+    │       │   ├── UStaticMeshComponent    (静态网格组件)
+    │       │   └── USkinnedMeshComponent   (骨骼网格组件)
+    │       ├── UCapsuleComponent       (胶囊碰撞体)
+    │       └── USphereComponent        (球体碰撞体)
+    └── ...其他组件子类
